@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/buku', [BukuController::class, 'store'])->name('buku.store');
     Route::delete('/buku/{id}', [BukuController::class, 'destroy'])->name('buku.destroy');
     Route::get('/buku/{id}/edit', [BukuController::class, 'edit'])->name('buku.edit');
-    Route::post('/buku/{id}', [BukuController::class, 'update'])->name('buku.update');
+    Route::put('/buku/{id}', [BukuController::class, 'update'])->name('buku.update');
 });
 
 Route::controller(LoginRegisterController::class)->group(function() {
